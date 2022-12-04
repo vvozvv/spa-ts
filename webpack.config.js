@@ -26,19 +26,21 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/i,
+        test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: 'style-loader',
-            options: { injectType: 'singletonStyleTag' },
-          },
-          'css-loader',
+          "css-modules-typescript-loader",
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
         ],
       },
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
   resolve: {
-    extensions: [ ".tsx", ".ts", ".js" ]
+    extensions: [ ".ts", ".js", ".css", ".scss" ]
   },
 };

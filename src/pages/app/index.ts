@@ -1,8 +1,10 @@
 import MainPage from '../main/main.index';
 import HamburgerPageIndex from '../hamburger-page/hamburger-page.index';
-import Page from '../../core/templates/page';
-import { Pages } from '../../core/contants/router';
+import Page from '@core/templates/page';
+import { Pages } from '@core/constants/router';
 import Header from '../../core/components/header/header';
+// import Header from '@core/components/header/header';
+import '../../core/style/main.scss';
 
 class App {
   private static container: HTMLElement = document.body;

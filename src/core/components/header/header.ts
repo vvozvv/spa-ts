@@ -1,5 +1,5 @@
 import Component from '../../../core/templates/component';
-import { menuList } from '../../contants/router';
+import { menuList } from '../../constants/router';
 
 class Header extends Component {
   constructor(tagName: string, className: string) {
@@ -15,6 +15,10 @@ class Header extends Component {
       headerMenuButtons.append(buttonHTML);
     });
 
+    const logo = document.createElement('div');
+    logo.innerText = 'HAMBURGER STORE';
+
+    this.container.append(logo)
     this.container.append(headerMenuButtons);
   }
 
