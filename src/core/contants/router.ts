@@ -6,11 +6,13 @@ export const enum Pages {
 type TMenu = {
   path: Pages;
   name: string;
-}
+};
 
 export const pagesList: Array<TMenu> = [
   { path: Pages.MainPage, name: 'Главная страница' },
   { path: Pages.HamburgerSinglePage, name: 'Единичная страница' },
-]
+];
 
-export const menuList: Array<TMenu> = pagesList.filter(item => item.path !== Pages.MainPage);
+export const menuList: Array<TMenu> = pagesList.filter(
+  (item) => item.path !== Pages.MainPage
+);

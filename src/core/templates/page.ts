@@ -3,12 +3,12 @@ abstract class Page {
   static textObject = {};
 
   protected constructor(id: string) {
-    this.container = document.createElement('div')
+    this.container = document.createElement('div');
     this.container.id = id;
   }
 
   protected createHeaderTitle(text: string) {
-    const headerTitle = document.createElement('h1')
+    const headerTitle = document.createElement('h1');
     headerTitle.innerText = text;
     return headerTitle;
   }

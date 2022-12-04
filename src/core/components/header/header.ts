@@ -1,5 +1,5 @@
 import Component from '../../../core/templates/component';
-import { menuList } from "../../contants/router";
+import { menuList } from '../../contants/router';
 
 class Header extends Component {
   constructor(tagName: string, className: string) {

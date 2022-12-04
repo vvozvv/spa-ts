@@ -19,8 +19,11 @@ module.exports = {
       { test: /\.txt$/, use: 'raw-loader' },
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        use: [
+          'ts-loader',
+          'eslint-loader'
+        ],
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
